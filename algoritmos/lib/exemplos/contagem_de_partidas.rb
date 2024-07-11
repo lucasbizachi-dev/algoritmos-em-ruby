@@ -27,3 +27,22 @@ Entrada: n = 14
 - 4ª Rodada: Equipes = 2, Partidas = 1 e 1 equipe é declarada vencedora.
 Número total de correspondências = 7 + 3 + 2 + 1 = 13.
 =end
+
+def number_of_matches(n)
+    matches = 0
+    while n > 1
+      if n.even?
+        matches += n / 2
+        n /= 2
+      else
+        matches += (n - 1) / 2
+        n = (n - 1) / 2 + 1
+      end
+    end
+    matches
+  end
+  
+  # Exemplos de uso
+  puts number_of_matches(7)  # Saída: 6
+  puts number_of_matches(14) # Saída: 13
+  

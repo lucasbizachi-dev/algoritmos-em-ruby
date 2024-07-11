@@ -21,3 +21,23 @@ Entrada: x = 10
  Saída: false
  Explicação: Lê 01 da direita para a esquerda. Portanto, não é um palíndromo.
 =end
+
+# Função para verificar se um número é palíndromo
+def palindromo?(x)
+    return false if x < 0
+    x.to_s == x.to_s.reverse
+  end
+  
+  # Testes unitários
+  require 'minitest/autorun'
+  
+  class TestPalindromo < Minitest::Test
+    def test_palindromo
+      assert_equal true, palindromo?(121)
+      assert_equal false, palindromo?(-121)
+      assert_equal false, palindromo?(10)
+      assert_equal true, palindromo?(1221)
+      assert_equal false, palindromo?(123)
+    end
+  end
+  

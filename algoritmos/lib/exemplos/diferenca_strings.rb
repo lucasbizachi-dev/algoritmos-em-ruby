@@ -25,3 +25,27 @@ Entrada: palavras = ["aaa","bob","ccc","ddd"]
  Saída: "bob"
  Explicação: Todas as matrizes de inteiros são [0, 0], exceto "bob", que corresponde a [13, -13].
 =end
+
+def difference_array(word)
+    differences = []
+    (0...word.length - 1).each do |i|
+      differences << (word[i+1].ord - word[i].ord)
+    end
+    differences
+  end
+  
+  def find_unique_difference(words)
+    diff_hash = Hash.new { |hash, key| hash[key] = [] }
+    words.each do |word|
+      diff_hash[difference_array(word)] << word
+    end
+  
+    diff_hash.each do |key, value|
+      return value.first if value.size == 1
+    end
+  end
+  
+  # Exemplos de uso
+  puts find_unique_difference(["adc", "wzy", "abc"]) # Saída: "abc"
+  puts find_unique_difference(["aaa", "bob", "ccc", "ddd"]) # Saída: "bob"
+  

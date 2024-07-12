@@ -21,3 +21,17 @@ Exemplo 3:
 Entrada: nums = [3,3], alvo = 6
  Saída: [0,1]
 =end
+
+def remove_and_maximize_number(number, digit)
+    index = number.index(digit)
+    number.slice(0, index) + number.slice(index + 1, number.length - index - 1)
+  end
+  
+  # Testes unitários
+  def test_remove_and_maximize_number
+    puts remove_and_maximize_number("123", "3") == "12" 
+    puts remove_and_maximize_number("1231", "1") == "231" 
+    puts remove_and_maximize_number("551", "5") == "51" 
+  
+  # Executar os testes
+  test_remove_and_maximize_number

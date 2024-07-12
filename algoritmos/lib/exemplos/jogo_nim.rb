@@ -28,3 +28,13 @@ Entrada: n = 2
  Saída: verdadeiro
 
 =end
+
+def can_win_nim(n)
+    n % 4 != 0
+  end
+  
+  # Exemplos de uso:
+  puts can_win_nim(4) 
+  puts can_win_nim(1
+  puts can_win_nim(2)
+  

@@ -2,13 +2,6 @@
 
 Bem-vindo ao repositório **Algoritmos em Ruby**! Este projeto é uma coleção de algoritmos implementados em Ruby, com o objetivo de fornecer exemplos claros e bem documentados de diversas soluções algorítmicas.
 
-## Índice
-
-- [Sobre](#sobre)
-- [Algoritmos](#algoritmos)
-- [Como Usar](#como-usar)
-- [Contribuindo](#contribuindo)
-- [Licença](#licença)
 
 ## Sobre
 
